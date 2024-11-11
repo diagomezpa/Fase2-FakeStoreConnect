@@ -117,7 +117,7 @@ Para consumir la API, sigue los siguientes pasos:
 
 1. **Clona el repositorio**:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/diagomezpa/Fase2-FakeStoreConnect
 
    cd fase2lecturadedatosapi
 
