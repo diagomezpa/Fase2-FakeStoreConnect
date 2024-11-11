@@ -51,7 +51,7 @@ Define el modelo de datos para los carritos de compra. Contiene las siguientes c
 
 ## Solicitudes a la API
 
-Las solicitudes HTTP se realizan utilizando el paquete `http` de Dart. La URL base de la API es `'https://fakestoreapi.com'`, y las solicitudes se envían a rutas como `/carts` o `/carts/{id}`.
+Las solicitudes HTTP se realizan utilizando el paquete `http` de Dart. La URL base de la API es `'https://fakestoreapi.com'`, y las solicitudes se envían a rutas como `/carts` , `/carts/{id}` `/products` , `/products/{id}` , `/users` , `/users/{id}` .
 
 ### Flujo de solicitudes:
 1. **Solicitud Exitosa (Código 200)**:
@@ -72,24 +72,25 @@ La clase `Either` de la librería `dartz` se usa para manejar resultados exitoso
 En este proyecto, se usa `Right` para devolver los datos de los carritos (`Carts`) y `Left` para devolver un mensaje de error en caso de fallo.
 
 ### Métodos Implementados:
-1. **`fetchCarts`**: Solicita una lista de carritos.
-   - **Éxito**: Devuelve un `Right` con la lista de carritos.
+usamos Either para el manejo de los errores 
+1. **`fetchList`**: Solicita una lista de items.
+   - **Éxito**: Devuelve un `Right` con la lista de items.
    - **Error**: Devuelve un `Left` con el mensaje de error.
 
-2. **`fetchCartById`**: Solicita un carrito específico por su ID.
-   - **Éxito**: Devuelve un `Right` con el carrito.
+2. **`fetchItem`**: Solicita un item específico por su ID.
+   - **Éxito**: Devuelve un `Right` con el item.
    - **Error**: Devuelve un `Left` con el mensaje de error.
 
-3. **`createCart`**: Crea un nuevo carrito.
-   - **Éxito**: Devuelve un `Right` con el carrito creado.
+3. **`createItem`**: Crea un nuevo item.
+   - **Éxito**: Devuelve un `Right` con el item creado.
    - **Error**: Devuelve un `Left` con el mensaje de error.
 
-4. **`deleteCart`**: Elimina un carrito.
-   - **Éxito**: Devuelve un `Right` con el carrito eliminado.
+4. **`deleteItem`**: Elimina un item.
+   - **Éxito**: Devuelve un `Right` con el item eliminado.
    - **Error**: Devuelve un `Left` con el mensaje de error.
 
-5. **`updateCart`**: Actualiza un carrito.
-   - **Éxito**: Devuelve un `Right` con el carrito actualizado.
+5. **`updateItem`**: Actualiza un item.
+   - **Éxito**: Devuelve un `Right` con el item actualizado.
    - **Error**: Devuelve un `Left` con el mensaje de error.
 
 ---
@@ -110,4 +111,34 @@ Este enfoque asegura que se manejen tanto los casos de éxito como de error de m
 
 ---
 
-¡Gracias por revisar este proyecto! Si tienes alguna duda o sugerencia, no dudes en contactarme.
+## Consumo de la API
+
+Para consumir la API, sigue los siguientes pasos:
+
+1. **Clona el repositorio**:
+   ```bash
+   git clone <URL_DEL_REPOSITORIO>
+
+   cd fase2lecturadedatosapi
+
+   dart pub get
+   
+   dart run lib/main.dart
+
+  ```
+
+Seleccione una opción:
+1. Listar carritos
+2. Crear carrito
+3. Actualizar carrito
+4. Eliminar carrito
+5. Listar productos
+6. Crear producto
+7. Actualizar producto
+8. Eliminar producto
+9. Eliminar carrito
+10. Actualizar carrito
+11. Procesar usuarios
+12. Obtener información de usuario por ID
+13. Crear usuario
+14. Eliminar usuario
